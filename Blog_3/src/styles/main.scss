@@ -1,0 +1,22 @@
+@import 'variables';
+@import 'header';
+@import 'footer';
+@import 'post';
+@import 'home';
+@import 'categories';
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

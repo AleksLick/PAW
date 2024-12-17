@@ -1,0 +1,15 @@
+header {
+    background-color: $header-bg;
+    color: $header-text;
+    padding: 1rem;
+  
+    nav {
+      display: flex;
+      gap: 1rem;
+  
+      a {
+        color: $header-text;
+      }
+    }
+  }
+  
