@@ -1,0 +1,3 @@
+[submodule "PAW"]
+	path = PAW
+	url = https://github.com/AleksLick/PAW.git
