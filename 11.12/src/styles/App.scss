@@ -1,0 +1,11 @@
+@use './variables' as *;
+@use './global';
+@use './components/header';
+@use './components/footer';
+@use './pages/homePage';
+@use './pages/postPage';
+@use './pages/categoriesPage';
+
+main {
+  padding: 20px;
+}

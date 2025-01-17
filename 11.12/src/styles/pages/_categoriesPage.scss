@@ -1,0 +1,28 @@
+@use '../variables' as *;
+
+.categories-page {
+  padding: 20px;
+  
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  li {
+    padding: 10px 20px;
+    background-color: $primary-color;
+    color: $background-color;
+    border-radius: 5px;
+  }
+
+  li:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}

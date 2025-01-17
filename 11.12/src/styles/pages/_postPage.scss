@@ -1,0 +1,19 @@
+@use '../variables' as *;
+
+.post-page {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+
+  h1 {
+    font-family: $heading-font-family;
+    font-size: 2.5rem;
+    color: $primary-color;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+}

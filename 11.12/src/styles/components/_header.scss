@@ -1,0 +1,22 @@
+@use '../variables' as *;
+
+header {
+  background-color: $primary-color;
+  padding: 10px 0;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.header-nav a {
+  color: $background-color;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.header-nav a:hover {
+  text-decoration: underline;
+}
