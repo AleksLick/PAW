@@ -1,0 +1,47 @@
+from typing import List, Tuple
+
+def read_graph(filename: str) -> Tuple[List[List[int]], int]:
+    # Dane tymczasowe:
+    lines = [
+        "4",
+        "0 1 3",
+        "1 0 2 3",
+        "2 1 3",
+        "3 0 1 2"
+    ]
+    # with open(filename, 'r') as file:
+        # lines = file.readlines()
+    vertex_count = int(lines[0].strip())
+    adjacency_list = []
+    for line in lines[1:]:
+        neighbours = list(map(int, line.strip().split()))
+        adjacency_list.append(neighbours)
+    return adjacency_list, vertex_count
+
+def write_neighbours_list(adjacency_list: List[List[int]]) -> None:
+    for i, neighbours in enumerate(adjacency_list):
+        print(f"Sąsiadami wierzchołka {i} są: {', '.join(map(str, neighbours))}")
+
+def list_to_matrix(adjacency_list: List[List[int]]) -> List[List[int]]:
+    vertex_count = len(adjacency_list)
+    matrix = [[0] * vertex_count for _ in range(vertex_count)]
+    for i, neighbours in enumerate(adjacency_list):
+        for j in neighbours:
+            matrix[i][j] = 1
+    return matrix
+
+def write_matrix(matrix: List[List[int]]) -> None:
+    print("\nMacierz sąsiedztwa:")
+    for row in matrix:
+        print(' '.join(map(str, row)))
+
+def main() -> None:
+    filename = 'graph.txt'
+    adjacency_list, vertex_count = read_graph(filename)
+    print("Lista sąsiedztwa:")
+    write_neighbours_list(adjacency_list)
+    adjacency_matrix = list_to_matrix(adjacency_list)
+    write_matrix(adjacency_matrix)
+
+if __name__ == '__main__':
+    main()
