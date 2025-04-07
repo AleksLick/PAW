@@ -1,22 +1,14 @@
 from typing import List, Tuple
 
 def read_graph(filename: str) -> Tuple[List[List[int]], int]:
-    # Dane tymczasowe:
-    lines = [
-        "4",
-        "0 1 3",
-        "1 0 2 3",
-        "2 1 3",
-        "3 0 1 2"
-    ]
-    # with open(filename, 'r') as file:
-        # lines = file.readlines()
-    vertex_count = int(lines[0].strip())
-    adjacency_list = []
-    for line in lines[1:]:
-        neighbours = list(map(int, line.strip().split()))
-        adjacency_list.append(neighbours)
-    return adjacency_list, vertex_count
+    with open(filename, 'r') as file:
+        lines = file.readlines()
+        vertex_count = int(lines[0].strip())
+        adjacency_list = []
+        for line in lines[1:]:
+            neighbours = list(map(int, line.strip().split()))
+            adjacency_list.append(neighbours)
+        return adjacency_list, vertex_count
 
 def write_neighbours_list(adjacency_list: List[List[int]]) -> None:
     for i, neighbours in enumerate(adjacency_list):
