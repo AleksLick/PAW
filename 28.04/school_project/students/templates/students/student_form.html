@@ -1,0 +1,7 @@
+<h2>Dodaj ucznia</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Zapisz</button>
+</form>
+<a href="{% url 'student_list' %}">Anuluj</a>

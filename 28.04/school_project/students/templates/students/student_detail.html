@@ -1,0 +1,9 @@
+<h2>{{ student }}</h2>
+<ul>
+  {% for grade in student.grades.all %}
+    <li>{{ grade.subject }}: {{ grade.value }}</li>
+  {% empty %}
+    <li>Brak ocen</li>
+  {% endfor %}
+</ul>
+<a href="{% url 'student_list' %}">Powrót do listy</a>
